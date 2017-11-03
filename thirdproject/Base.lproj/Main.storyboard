@@ -28,9 +28,8 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kF-C6-CWZ">
                                 <rect key="frame" x="0.0" y="610" width="375" height="122"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIX-Bm-xpB" customClass="MenuDesign" customModule="thirdproject" customModuleProvider="target">
-                                        <rect key="frame" x="165" y="8" width="48" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIX-Bm-xpB" customClass="MenuDesign" customModule="thirdproject" customModuleProvider="target">
+                                        <rect key="frame" x="171" y="0.0" width="48" height="46"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.47636993838028169" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -38,19 +37,53 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-CI-HVd">
-                                        <rect key="frame" x="163" y="6" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAT-CI-HVd">
+                                        <rect key="frame" x="170" y="-2" width="50" height="50"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="icons8-slide-up"/>
                                         <connections>
                                             <action selector="MenuToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xnI-T4-Fgy"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vF1-xw-jga">
+                                        <rect key="frame" x="30" y="58" width="315" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcA-ef-Eqj">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" image="icons8-facebook"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae7-OZ-Utu">
+                                                <rect key="frame" x="88.5" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" image="icons8-linkedin"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-xI-tXT">
+                                                <rect key="frame" x="176.5" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" image="icons8-twitter"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2je-7e-mMU">
+                                                <rect key="frame" x="265" y="0.0" width="50" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <state key="normal" image="icons8-snapchat"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vF1-xw-jga" secondAttribute="bottom" constant="14" id="A27-1k-XVl"/>
+                                    <constraint firstItem="vF1-xw-jga" firstAttribute="top" secondItem="EAT-CI-HVd" secondAttribute="bottom" constant="10" id="CNA-hs-0bn"/>
+                                    <constraint firstItem="EAT-CI-HVd" firstAttribute="leading" secondItem="7kF-C6-CWZ" secondAttribute="leading" constant="170" id="D7z-sg-CgG"/>
+                                    <constraint firstItem="xIX-Bm-xpB" firstAttribute="leading" secondItem="7kF-C6-CWZ" secondAttribute="leading" constant="171" id="Du7-2U-sRw"/>
+                                    <constraint firstAttribute="trailing" secondItem="vF1-xw-jga" secondAttribute="trailing" constant="30" id="Nu4-9n-9Cv"/>
+                                    <constraint firstItem="EAT-CI-HVd" firstAttribute="centerX" secondItem="xIX-Bm-xpB" secondAttribute="centerX" id="a9A-Y0-aPU"/>
                                     <constraint firstAttribute="height" constant="122" id="bpg-qW-nR4"/>
+                                    <constraint firstItem="vF1-xw-jga" firstAttribute="leading" secondItem="7kF-C6-CWZ" secondAttribute="leading" constant="30" id="bs9-8k-Ni4"/>
+                                    <constraint firstItem="EAT-CI-HVd" firstAttribute="centerY" secondItem="xIX-Bm-xpB" secondAttribute="centerY" id="mbo-dN-76O"/>
+                                    <constraint firstItem="xIX-Bm-xpB" firstAttribute="top" secondItem="7kF-C6-CWZ" secondAttribute="top" id="n5v-S6-jcd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -63,8 +96,12 @@
                     </view>
                     <connections>
                         <outlet property="DarkCircle" destination="xIX-Bm-xpB" id="2fo-EN-V3Y"/>
+                        <outlet property="FacebookButton" destination="wcA-ef-Eqj" id="Krc-dA-Bfx"/>
+                        <outlet property="LinkedInButton" destination="Ae7-OZ-Utu" id="V0L-oJ-Hb4"/>
                         <outlet property="MenuButton" destination="EAT-CI-HVd" id="Gsx-em-MFe"/>
                         <outlet property="MenuView" destination="7kF-C6-CWZ" id="kGb-lw-idt"/>
+                        <outlet property="SnapchatButton" destination="2je-7e-mMU" id="0m2-jw-be1"/>
+                        <outlet property="TwitterButton" destination="c8X-xI-tXT" id="6Up-jQ-JHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,7 +110,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-facebook" width="50" height="50"/>
+        <image name="icons8-linkedin" width="50" height="50"/>
         <image name="icons8-slide-up" width="50" height="50"/>
+        <image name="icons8-snapchat" width="50" height="50"/>
+        <image name="icons8-twitter" width="50" height="50"/>
         <image name="pexels-photo-243752" width="500" height="750"/>
     </resources>
 </document>
