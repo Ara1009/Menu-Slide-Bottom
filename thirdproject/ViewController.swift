@@ -22,13 +22,22 @@ class ViewController: UIViewController {
         if DarkCircle.transform == .identity {
             UIView.animate(withDuration:1, animations:{
                 self.DarkCircle.transform = CGAffineTransform(scaleX: 11, y: 11)
+                self.MenuView.transform = CGAffineTransform(translationX: 0, y: -65)
+                self.MenuButton.transform = CGAffineTransform(rotationAngle: self.radians(degrees: 180))
             }) { (true) in
             }
         } else {
             UIView.animate(withDuration:1, animations:{
                 self.DarkCircle.transform = .identity
+                self.MenuView.transform = .identity
+                self.MenuButton.transform = .identity
             }) { (true) in
             }
         }
+    }
+    
+    
+    func radians(  degrees: Double) -> CGFloat{
+        return CGFloat(degrees * .pi / degrees)
     }
 }
